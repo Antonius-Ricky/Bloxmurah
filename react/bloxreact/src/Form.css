@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&display=swap');
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    width: 100%;
+    padding-top: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+
+.signup-container {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.login-nav{
+    color: #b53030;
+}
+.logo {
+    max-width: 70px;
+    margin-left: 250px;
+    margin-bottom: -20px;
+    margin-top: -5px;
+}
+
+h1 {
+    margin: 5px 0;
+    color: #9a0101;
+    font-size: 3.5em;
+    font-family: 'Blinker';
+    font-weight: bolder;
+}
+
+
+.form-container h2 {
+    margin: -40px 0 0 0;
+    color: #ffffff;
+    font-size: 3.5em;
+    font-family: 'Blinker';
+    font-weight: bolder;
+}
+.signup-container h2 {
+    margin: -40px 0 0 0;
+    color: #ffffff;
+    font-size: 3.5em;
+    font-family: 'Blinker';
+    font-weight: bolder;
+}
+
+p {
+    margin: 10px 0;
+    color: #888888;
+    font-size: 1em;
+}
+
+.form-container input[type='text'], input[type='password'], input[type='email'] {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 4px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    font-family: 'Blinker', sans-serif;
+    font-size: 1em;
+}
+.signup-container input[type='text'], input[type='password'], input[type='email'] {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 4px;
+    border: none;
+    background-color: #333333;
+    color: #ffffff;
+    font-family: 'Blinker', sans-serif;
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: #888888;
+}
+
+button {
+    display: block;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 4px;
+    border: none;
+    background-color: #9a0101;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Blinker', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #b53030;
+}
+
+a {
+    color: #9a0101;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 5px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 0;
+    font-size: 0.9em;
+
+}
+
+.terms input {
+    width: 10px;
+    margin-right: 10px;
+}
+
+.terms label {
+    display: flex;
+    align-items: center;
+}
+
+.terms span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.terms a {
+    color: #9a0101;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}

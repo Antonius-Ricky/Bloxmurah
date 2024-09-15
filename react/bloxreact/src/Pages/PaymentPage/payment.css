@@ -1,0 +1,136 @@
+
+.payment-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px; 
+  color: #ffffff; 
+  font-family: Arial, sans-serif; 
+}
+
+
+
+.order-details {
+  background-color: #1f1f1f; 
+  border-radius: 8px;
+  padding: 30px; 
+  width: 48%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  font-size: 18px; 
+}
+
+.payment-methods {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  padding: 30px;
+  width: 48%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  font-size: 18px;
+}
+
+
+.order-details h1,
+.payment-methods h1 {
+  font-size: 24px; 
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.order-details p,
+.payment-methods p {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #a6a6a6;
+   
+}
+
+.payment-status,
+.order-status {
+  color: #a6a6a6;
+  font-weight: bold;
+}
+
+.payment-status span,
+.order-status span {
+  color: inherit; 
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; 
+}
+.qr-container p{
+  color: #ffffff;
+}
+
+
+.qr-image {
+  width: 300px; 
+  height: 300px; 
+  margin-bottom: 15px; 
+  border: 2px solid #ffffff; 
+}
+
+
+.bca-instructions {
+  margin-top: 30px; 
+}
+
+.bca-instructions p {
+  margin: 10px 0; 
+  font-size: 18px; 
+}
+
+.contact-us {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  font-size: 20px; 
+}
+
+
+.contact-us-icon {
+  margin-left: 15px; 
+  font-size: 30px; 
+  color: #25d366;
+}
+
+
+.username {
+  color: #ffffff; 
+  font-size: 18px; 
+}
+
+.total-purchase {
+  color: #00ff00; 
+  font-size: 18px; 
+}
+
+.note {
+  margin-top: 25px;
+  font-size: 18px; 
+  color: #ffffff;
+}
+.product-detail{
+  color: white;
+}
+.transaction-id{
+  color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+  .payment-container {
+    flex-direction: column;
+  }
+
+  .order-details,
+  .payment-methods {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

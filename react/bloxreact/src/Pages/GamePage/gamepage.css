@@ -1,0 +1,239 @@
+    .game-page {
+        display: flex;
+        gap: 20px;
+        min-height: 100vh;
+    }
+
+    .left-column, .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .game-name{
+        font-weight: 800;
+        color: white;
+    }
+    .left-column {
+        flex: 1;
+    }
+
+    .right-column {
+        flex: 2;
+    }
+    .game-info, .tutorial{
+        background-color: #36393e;
+        padding: 20px;
+        border-radius: 8px;
+        width: 500px;
+        box-sizing: border-box; 
+        overflow: hidden; 
+    }
+
+     .user-input-section, .payment-section, .contact-promo-section, .summary-section {
+        background-color: #36393e;
+        padding: 20px;
+        border-radius: 8px;
+        width: 800px;
+        box-sizing: border-box;
+        overflow: hidden; 
+    }
+    .user-input-section input[type='text'],.contact-promo-section input[type='tel']{
+        display: block;
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 4px;
+        border: none;
+        background-color: #333333;
+        color: #ffffff;
+        font-family: 'Blinker', sans-serif;
+        font-size: 1em;
+    }
+    
+
+    .items-list{
+        background-color: #36393e;
+        padding: 20px;
+        border-radius: 8px;
+        width: 800px;
+        min-height: 265px;
+        box-sizing: border-box;
+        overflow: hidden; 
+    }
+    
+
+    .game-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .items-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px;
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    
+    .item-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .item-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .item-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 8px;
+    }
+    
+    .item-details {
+        margin-left: 15px;
+        flex-grow: 1;
+    }
+    
+    .item-name {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+    
+    .item-price {
+        font-size: 14px;
+        color: #00ff00;
+    }
+    
+    .checkbox-container {
+        position: absolute;
+        top: 5px;
+        right: 8px;
+   
+    }
+    
+    .checkbox-container input[type="checkbox"] {
+        width: 12px; 
+        height: 12px; 
+        transform: scale(1.5);
+        cursor: pointer;
+        accent-color: #ff0000; 
+        visibility: visible;
+        opacity: 1; 
+        position: relative; 
+ 
+    }
+
+    .summary-section {
+        background-color: #36393e;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .summary-content {
+        margin-bottom: 20px;
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .summary-item p{
+        color: white;
+    }
+
+    .quantity {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .quantity-icon {
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    .total-price {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        margin-top: 10px;
+    }
+    
+    .price-number {
+        color: #00ff00; 
+    }
+
+    .summary-actions {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .reset-button, .buy-button {
+        flex-grow: 1;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #b00000;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        text-align: center;
+        border: none;
+    }
+
+    .buy-button {
+        background-color: #b00000;
+    }
+
+    .reset-button:hover, .buy-button:hover {
+        opacity: 0.9;
+        background-color: #55090a;
+    }
+ .selected-category {
+    font-size: 18px;
+    color: #a50d0d;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.category-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    flex: 1;
+    padding: 8px 12px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 12px;
+    background-color: #6b6b6b;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-button.active {
+    background-color: #910606; 
+    box-shadow: 0px 0px 15px rgba(176, 0, 0, 0.7);
+}
+
+    

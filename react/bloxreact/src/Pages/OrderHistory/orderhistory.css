@@ -1,0 +1,80 @@
+.order-history-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 500px;
+}
+
+.order-card {
+    border-radius: 8px;
+    background-color: #3e3d3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.order-card:hover{
+        transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); 
+}
+
+.order-history-status {
+    background-color: #d4edda;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #155724;
+}
+
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    color: #ffffff;
+    margin: 5px;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+
+.orde-history-details {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.order-info h3 {
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: rgb(158, 157, 157);
+    margin: 10px
+}
+
+.order-total-price{
+    color: #00ff00; 
+}
+
+.order-actions {
+    text-align: right;
+}
+
+.buy-again-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buy-again-button:hover {
+    background-color: #e64a19;
+}

@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@400;600&display=swap');
+.verify-email-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px; 
+    color: #ffffff; 
+    font-family: Arial, sans-serif; 
+  }
+.verify-box{
+    background-color: #1f1f1f; 
+    border-radius: 8px;
+    padding: 40px; 
+    width: 60%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+    font-size: 18px; 
+  }
+.verify-box h1{
+    color: #ffffff;
+    font-family: 'Blinker';
+    font-weight: bolder;
+}
+.verify-box button{
+    padding: '10px 20px';
+    font-size: '16px';
+    cursor: 'pointer';
+    background-color: '#9a0101';
+    color: '#fff';
+    border: 'none';
+    border-radius: '5px';
+    margin-top: '30px'
+}

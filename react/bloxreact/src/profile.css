@@ -1,0 +1,80 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2e2d2d;
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #9a0101;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.profile-details {
+    margin-left: 15px;
+}
+
+.logout-button {
+    background-color: transparent;
+    border: none;
+    color: #f44336;
+    cursor: pointer;
+    font-size: 24px;
+}
+.logout-button:hover{
+    background-color: transparent;
+    color: #9a0101;
+}
+.order-history {
+    margin-top: 20px;
+}
+
+.order-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.order-categories div {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.order-categories div:hover {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.help-section {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #9a0101;
+    cursor: pointer;
+}
+
+.help-section i {
+    margin-right: 10px;
+}

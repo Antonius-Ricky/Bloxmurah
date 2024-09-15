@@ -1,8 +1,9 @@
 {
   "name": "bloxreact",
-  "homepage": "https://bloxmurah.com",
+  "homepage": "https://bloxmurah.com/",
   "private": true,
   "version": "0.0.0",
+  "proxy": "https:/bloxflask.bloxmurah.com/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,9 +14,15 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "js-cookie": "^3.0.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "react-swipeable": "^7.0.1",
+    "react-toastify": "^10.0.5",
+    "remixicon": "^4.3.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
