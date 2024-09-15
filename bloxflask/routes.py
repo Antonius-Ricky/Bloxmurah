@@ -192,32 +192,6 @@ def index():
     return render_template('home.html', title="Home")
 
 
-# @routes.route('/signup', methods=['POST'])
-# def signup():
-#     email = request.json.get('email', None).lower()
-#     username = request.json.get('username', None).lower()
-#     password = request.json.get('password', None)
-
-#     if User.query.filter(db.func.lower(User.email) == email).first():
-#         return jsonify({"msg": "Email is already taken"}), 400
-
-#     if User.query.filter(db.func.lower(User.username) == username).first():
-#         return jsonify({"msg": "Username already taken"}), 400
-
-#     token = s.dumps({'email': email, 'username': username, 'password': password}, salt='email-confirm')
-
-#     verify_url = url_for('routes.verify_email', token=token, _external=True)
-
-#     msg = Message('Confirm Your Email', sender=current_app.config['MAIL_USERNAME'], recipients=[email])
-#     msg.body = f'Please click the following link to verify your email and activate your account: {verify_url}'
-
-#     try:
-#         from app import mail  
-#         mail.send(msg)
-#         return jsonify({"msg": "Please check your email to confirm your account."}), 200
-#     except Exception as e:
-#         return jsonify({"msg": f"Failed to send verification email: {str(e)}"}), 500
-
 @routes.route('/signup', methods=['POST'])
 def signup():
     email = request.json.get('email', None).lower()
@@ -230,20 +204,45 @@ def signup():
     if User.query.filter(db.func.lower(User.username) == username).first():
         return jsonify({"msg": "Username already taken"}), 400
 
-    try:
-        new_user = User(email=email, username=username, password_hash=User.hash_password(password))
-        db.session.add(new_user)
-        db.session.commit()
+    token = s.dumps({'email': email, 'username': username, 'password': password}, salt='email-confirm')
 
-        return jsonify({"msg": "Account created successfully."}), 201
+    verify_url = f'http://localhost:5173/verify-email/{token}'
+
+    msg = Message('Confirm Your Email', sender=current_app.config['MAIL_USERNAME'], recipients=[email])
+    msg.body = f'Please click the following link to verify your email and activate your account: {verify_url}'
+
+    try:
+        from app import mail  
+        mail.send(msg)
+        return jsonify({"msg": "Please check your email to confirm your account."}), 200
     except Exception as e:
-        return jsonify({"msg": f"Failed to create account: {str(e)}"}), 500
+        return jsonify({"msg": f"Failed to send verification email: {str(e)}"}), 500
+
+# @routes.route('/signup', methods=['POST'])
+# def signup():
+#     email = request.json.get('email', None).lower()
+#     username = request.json.get('username', None).lower()
+#     password = request.json.get('password', None)
+
+#     if User.query.filter(db.func.lower(User.email) == email).first():
+#         return jsonify({"msg": "Email is already taken"}), 400
+
+#     if User.query.filter(db.func.lower(User.username) == username).first():
+#         return jsonify({"msg": "Username already taken"}), 400
+
+#     try:
+#         new_user = User(email=email, username=username, password_hash=User.hash_password(password))
+#         db.session.add(new_user)
+#         db.session.commit()
+
+#         return jsonify({"msg": "Account created successfully."}), 201
+#     except Exception as e:
+#         return jsonify({"msg": f"Failed to create account: {str(e)}"}), 500
 
 
 @routes.route('/verify_email/<token>', methods=['GET'])
 def verify_email(token):
     try:
-
         data = s.loads(token, salt='email-confirm', max_age=3600)
         email = data.get('email')
         username = data.get('username')
@@ -264,6 +263,7 @@ def verify_email(token):
         return jsonify({"msg": "Invalid or tampered verification link."}), 400
     except Exception as e:
         return jsonify({"msg": f"An error occurred: {str(e)}"}), 400
+
 
 @routes.route('/login', methods=['POST'])
 def login():
@@ -314,7 +314,7 @@ def forgot_password():
 
     token = s.dumps(email, salt='email-confirm')
 
-    link = f'https://bloxmurah.com/reset-password/{token}'
+    link = f'http://localhost:5173/reset-password/{token}'
 
     msg = Message('Password Reset Request', 
                   sender=current_app.config['MAIL_USERNAME'], 

@@ -7,6 +7,7 @@ import GamePage from './Pages/GamePage/gamepage';
 import PaymentPage from './Pages/PaymentPage/payment'; 
 import Signup from './SignUp';
 import VerifyEmail from './VerifyEmail';
+import VerifyEmailWithToken from './VerifyEmailWithToken';
 import NotFound from './Pages/404Page/404';
 import ForgotPassword from './ForgotPassword';
 import Logout from './Logout';
@@ -89,6 +90,7 @@ const App = () => {
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/verify-email" element={<VerifyEmail />} />
+                    <Route path="/verify-email/:token" element={<VerifyEmailWithToken />} />
                     <Route 
                         path="/profile" 
                         element={token ? 

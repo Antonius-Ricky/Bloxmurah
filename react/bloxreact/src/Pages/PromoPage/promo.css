@@ -82,22 +82,22 @@
   }
   
   .promo-item {
-    background-color: #2e2e3e; /* Background color of promo item */
+    background-color: #2e2e3e; 
     border-radius: 8px;
     overflow: hidden;
     text-decoration: none;
     color: #fff;
-    padding: 20px; /* Padding inside the container */
+    padding: 20px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .promo-item:hover {
-    transform: translateY(-10px); /* Lift the container slightly */
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); /* Glow effect */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.4); 
   }
   
   .promo-banners {

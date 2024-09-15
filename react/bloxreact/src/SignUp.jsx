@@ -34,7 +34,7 @@ const SignUp = () => {
                 return;
             }
 
-            const response = await axios.post('https://bloxflask.bloxmurah.com/signup', {
+            const response = await axios.post('http://127.0.0.1:5000/signup', {
                 email: normalizedEmail,
                 username: normalizedUsername,
                 password

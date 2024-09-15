@@ -50,7 +50,7 @@ const Login = ({ saveTokens }) => {
             <div>
                 <input
                     type="text"
-                    placeholder="Username or Email"
+                    placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required

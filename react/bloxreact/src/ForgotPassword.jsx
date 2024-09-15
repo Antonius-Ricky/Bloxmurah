@@ -2,24 +2,22 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Form.css';
 import logo from './assets/images/logo.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ForgotPassword = () => {
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [error, setError] = useState('');
 
     const sendResetLink = async () => {
         try {
-            const response = await axios.post('https://bloxflask.bloxmurah.com/forgot-password', { email });
-            setMessage(response.data.msg);
-            setError('');
+            const response = await axios.post('http://127.0.0.1:5000/forgot-password', { email });
+            toast.success(response.data.msg);
         } catch (error) {
             if (error.response && error.response.data && error.response.data.msg) {
-                setError(error.response.data.msg);
+                toast.error(error.response.data.msg);
             } else {
-                setError('Failed to send reset link. Please try again.');
+                toast.error('Failed to send reset link. Please try again.');
             }
-            setMessage('');
         }
     };
 
@@ -40,14 +38,13 @@ const ForgotPassword = () => {
                     required
                 />
                 <button onClick={sendResetLink}>Send</button>
-                {message && <p className="success-message">{message}</p>}
-                {error && <p className="error-message">{error}</p>}
             </div>
             <div className="footer-links">
                 <a href="/signup">Sign Up</a>
                 <span> | </span>
                 <a href="/login">Log In</a>
             </div>
+            <ToastContainer />
         </div>
     );
 };
